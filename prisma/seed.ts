@@ -44,7 +44,8 @@ async function main() {
       email: "admin@dgtl.dk",
       name: "DGTL Admin",
       role: "ADMIN",
-      passwordHash
+      passwordHash,
+      lastLoginAt: new Date("2026-05-20T08:00:00.000Z")
     }
   });
 
@@ -114,6 +115,7 @@ async function main() {
         name: driver.name,
         role: "DRIVER",
         passwordHash,
+        lastLoginAt: driver.lastLoginAt ? new Date(driver.lastLoginAt) : null,
         profile: {
           create: {
             id: driver.id,

@@ -65,6 +65,7 @@ model User {
   role         UserRole       @default(DRIVER)
   passwordHash String?
   createdAt    DateTime       @default(now())
+  lastLoginAt  DateTime?
   updatedAt    DateTime       @updatedAt
   profile      DriverProfile?
 }
