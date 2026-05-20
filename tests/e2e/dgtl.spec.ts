@@ -86,3 +86,15 @@ test("profile exposes fun and win driver level choices", async ({ page }) => {
   await expect(page.locator(".profile-level-option b").filter({ hasText: "Am" })).toBeVisible();
   await expect(page.locator(".profile-level-option b").filter({ hasText: "Pro" })).toBeVisible();
 });
+
+test("rules page exposes general and endurance rule documents", async ({ page }) => {
+  await page.goto("/regler");
+
+  await expect(page.getByRole("heading", { name: "Regler", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "DGTL.dk Generelle Regler 2026" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "DGTL Endurance 2026 - Tillægsregler" })
+  ).toBeVisible();
+  await expect(page.getByText("Kører for at vinde (Pro)").first()).toBeVisible();
+  await expect(page.getByText("Kører for sjov (Am)").first()).toBeVisible();
+});
