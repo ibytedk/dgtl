@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
   title: "DGTL - Danish Grand Touring League",
-  description: "SIMBIN GTR2 liga med kalender, tilmelding, resultater, teams og downloads."
+  description: "SIMBIN GTR/GTR2 liga med kalender, tilmelding, resultater, teams og downloads."
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

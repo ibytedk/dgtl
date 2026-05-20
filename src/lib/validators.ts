@@ -4,6 +4,14 @@ export const profileLevelSchema = z.object({
   intent: z.enum(["FUN", "WIN"])
 });
 
+export const driverProfileSchema = z.object({
+  name: z.string().trim().min(2).max(120),
+  handle: z.string().trim().min(2).max(40),
+  racingNumber: z.number().int().min(1).max(999),
+  intent: z.enum(["FUN", "WIN"]),
+  carId: z.string().min(1)
+});
+
 export const raceSignupSchema = z.object({
   driverId: z.string().min(1),
   classId: z.string().min(1),

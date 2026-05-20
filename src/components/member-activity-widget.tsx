@@ -7,7 +7,7 @@ type MemberActivityWidgetProps = {
 
 function MemberList({ members }: { members: readonly MemberActivity[] }) {
   return (
-    <ul className="retro-member-list">
+    <ul className="member-activity-list">
       {members.map((member) => (
         <li key={member.id}>{member.displayName}</li>
       ))}
@@ -17,13 +17,16 @@ function MemberList({ members }: { members: readonly MemberActivity[] }) {
 
 export function MemberActivityWidget({ latestMembers, inactiveMembers }: MemberActivityWidgetProps) {
   return (
-    <aside className="retro-member-widget" aria-label="Medlemsaktivitet">
+    <aside className="member-activity-widget" aria-label="Medlemsaktivitet">
+      <div className="concept-panel-title member-activity-title">
+        <h2>Medlemmer</h2>
+      </div>
       <section>
-        <h3 className="retro-member-heading">Nyeste medlemmer</h3>
+        <h3>Nyeste medlemmer</h3>
         <MemberList members={latestMembers} />
       </section>
       <section>
-        <h3 className="retro-member-heading">På vej ud...</h3>
+        <h3>På vej ud...</h3>
         <MemberList members={inactiveMembers} />
       </section>
     </aside>

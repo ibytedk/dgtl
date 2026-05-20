@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { getRequestUser, requireDriver } from "@/lib/auth";
+import { isClassAllowedForDriverLevel } from "@/lib/driver-class-rules";
 import { prisma } from "@/lib/prisma";
 import { raceSignupSchema } from "@/lib/validators";
 
@@ -11,8 +12,13 @@ export async function POST(
   const user = requireDriver(await getRequestUser(request));
   const { raceId } = await context.params;
   const payload = raceSignupSchema.parse(await request.json());
+  const profile = await prisma.driverProfile.findUnique({ where: { id: payload.driverId } });
 
-  if (user.role === "DRIVER" && user.id !== payload.driverId) {
+  if (!profile) {
+    return NextResponse.json({ error: "Kørerprofil ikke fundet." }, { status: 404 });
+  }
+
+  if (user.role === "DRIVER" && user.id !== profile.id && user.id !== profile.userId) {
     return NextResponse.json({ error: "Du kan kun tilmelde din egen kørerprofil." }, { status: 403 });
   }
 
@@ -33,6 +39,13 @@ export async function POST(
 
   if (!race.classes.some((raceClass: { classId: string }) => raceClass.classId === payload.classId)) {
     return NextResponse.json({ error: "Klassen er ikke aktiv for dette løb." }, { status: 422 });
+  }
+
+  if (!isClassAllowedForDriverLevel(profile.level, payload.classId)) {
+    return NextResponse.json(
+      { error: "Den valgte klasse er ikke tilladt for din profiltype." },
+      { status: 422 }
+    );
   }
 
   const car = await prisma.car.findUnique({ where: { id: payload.carId } });

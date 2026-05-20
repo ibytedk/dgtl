@@ -322,7 +322,7 @@ export default function HomePage() {
         <p>
           Danish Grand Touring League
           <br />
-          SIMBIN GTR2 liga siden 2026.
+          SIMBIN GTR/GTR2 liga siden 2005.
         </p>
         <div>
           <span>Følg os</span>

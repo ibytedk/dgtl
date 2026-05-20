@@ -84,10 +84,25 @@ test("profile exposes fun and win driver level choices", async ({ page }) => {
 
   await expect(page.getByRole("heading", { name: "Kørerprofil" })).toBeVisible();
   await expect(page.getByText("Ambitionsniveau")).toBeVisible();
+  await expect(page.getByLabel("Navn", { exact: true })).toBeVisible();
+  await expect(page.getByLabel("Kaldenavn", { exact: true })).toBeVisible();
+  await expect(page.getByLabel("Startnummer", { exact: true })).toBeVisible();
+  await expect(page.getByLabel("Bilvalg efter profilregler", { exact: true })).toBeVisible();
   await expect(page.getByRole("radio", { name: /Kører for sjov/ })).toBeVisible();
   await expect(page.getByRole("radio", { name: /Kører for at vinde/ })).toBeVisible();
   await expect(page.locator(".profile-level-option b").filter({ hasText: "Am" })).toBeVisible();
   await expect(page.locator(".profile-level-option b").filter({ hasText: "Pro" })).toBeVisible();
+  await page.getByRole("radio", { name: /Kører for sjov/ }).check();
+  await expect(page.getByLabel("Bilvalg efter profilregler", { exact: true })).toContainText("nGT -");
+  await expect(page.getByText("Am må vælge nGT, G2 eller G3.")).toBeVisible();
+});
+
+test("login page exposes Google SSO and email login", async ({ page }) => {
+  await page.goto("/login");
+
+  await expect(page.getByRole("heading", { name: "Login" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Log ind med Google" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Log ind med email" })).toBeVisible();
 });
 
 test("rules page exposes general and endurance rule documents", async ({ page }) => {

@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/.*": false,
+        "**/.prepros_*.*": false,
+        "**/*-dist.js": false,
+        "**/*.ico": false,
+        "**/*.map": false,
+        "**/*.mp3": false,
+        "**/*.sfk": false,
+        "**/*.xml": false,
+        "assets/art": false,
+        "assets/audio": false,
+        "assets/favicon": false
+    }
+}
