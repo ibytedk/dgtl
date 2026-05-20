@@ -14,6 +14,7 @@ import {
   teams,
   tracks
 } from "../src/lib/sample-data";
+import { defaultRuleDocuments, sanitizeRuleHtml } from "../src/lib/rules";
 
 const prisma = new PrismaClient();
 
@@ -21,6 +22,7 @@ async function main() {
   const passwordHash = await bcrypt.hash("dgtl-dev-password", 10);
 
   await prisma.newsPost.deleteMany();
+  await prisma.ruleDocument.deleteMany();
   await prisma.download.deleteMany();
   await prisma.skinUpload.deleteMany();
   await prisma.raceResult.deleteMany();
@@ -180,6 +182,16 @@ async function main() {
       data: {
         ...post,
         publishedAt: post.publishedAt
+      }
+    });
+  }
+
+  for (const document of defaultRuleDocuments) {
+    await prisma.ruleDocument.create({
+      data: {
+        ...document,
+        bodyHtml: sanitizeRuleHtml(document.bodyHtml),
+        publishedAt: new Date()
       }
     });
   }

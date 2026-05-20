@@ -32,3 +32,9 @@ export const raceResultSchema = z.object({
   penaltySeconds: z.number().int().min(0).default(0),
   pointsOverride: z.number().int().min(0).nullable().optional()
 });
+
+export const ruleDocumentSchema = z.object({
+  slug: z.enum(["generelle-regler", "dgtl-endurance"]),
+  title: z.string().trim().min(3).max(120),
+  bodyHtml: z.string().trim().min(20).max(120_000)
+});
