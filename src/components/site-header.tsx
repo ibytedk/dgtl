@@ -5,7 +5,7 @@ const navItems: Array<{ href: Route; label: string }> = [
   { href: "/kalender", label: "Kalender" },
   { href: "/baner", label: "Baner" },
   { href: "/biler", label: "Biler" },
-  { href: "/regler", label: "Regler" },
+  { href: "/regler" as Route, label: "Regler" },
   { href: "/stillinger", label: "Stillinger" },
   { href: "/downloads", label: "Downloads" },
   { href: "/nyheder", label: "Nyheder" }
