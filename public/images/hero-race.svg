@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">DGTL endurance racing hero</title>
+  <desc id="desc">Original stylized night racing scene with GT cars, headlights and speed streaks.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070718"/>
+      <stop offset="0.48" stop-color="#191146"/>
+      <stop offset="1" stop-color="#401444"/>
+    </linearGradient>
+    <linearGradient id="track" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#171a25"/>
+      <stop offset="0.55" stop-color="#2b2f3c"/>
+      <stop offset="1" stop-color="#11131b"/>
+    </linearGradient>
+    <linearGradient id="redCar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffefdb"/>
+      <stop offset="0.2" stop-color="#f04b37"/>
+      <stop offset="0.72" stop-color="#78182e"/>
+      <stop offset="1" stop-color="#221026"/>
+    </linearGradient>
+    <linearGradient id="tealCar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8fff7"/>
+      <stop offset="0.32" stop-color="#19c6b7"/>
+      <stop offset="0.72" stop-color="#126070"/>
+      <stop offset="1" stop-color="#101424"/>
+    </linearGradient>
+    <linearGradient id="yellowCar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff3ba"/>
+      <stop offset="0.45" stop-color="#ffd15f"/>
+      <stop offset="1" stop-color="#b54d19"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <path d="M0 568 C240 475 389 456 651 486 C1019 528 1260 502 1600 376 L1600 900 L0 900 Z" fill="url(#track)"/>
+  <path d="M-50 822 C390 698 760 596 1640 458" stroke="#f04b37" stroke-width="42" stroke-linecap="round" opacity=".82" filter="url(#soft)"/>
+  <path d="M-80 860 C450 730 860 600 1690 440" stroke="#ffd15f" stroke-width="20" stroke-linecap="round" opacity=".9"/>
+  <path d="M-80 725 C340 642 690 532 1580 365" stroke="#5f63ff" stroke-width="22" stroke-linecap="round" opacity=".56"/>
+  <path d="M1260 0 L560 900" stroke="#ffffff" stroke-width="3" opacity=".16"/>
+  <path d="M1390 0 L720 900" stroke="#ffffff" stroke-width="2" opacity=".1"/>
+  <g opacity=".7">
+    <path d="M0 114 H1600" stroke="#f04b37" stroke-width="28"/>
+    <path d="M72 114 H412" stroke="#fff" stroke-width="6" stroke-dasharray="22 18" opacity=".85"/>
+    <path d="M1144 114 H1486" stroke="#fff" stroke-width="6" stroke-dasharray="22 18" opacity=".85"/>
+  </g>
+  <g transform="translate(905 500) rotate(-9)">
+    <path d="M32 92 C70 30 236 10 397 34 C506 50 620 96 654 144 C553 185 245 194 55 158 C18 151 10 126 32 92Z" fill="url(#tealCar)"/>
+    <path d="M186 38 C258 18 370 28 456 64 L408 105 C324 80 241 78 162 95Z" fill="#0a0d18" opacity=".9"/>
+    <path d="M478 70 L600 113 L526 128Z" fill="#f04b37" opacity=".9"/>
+    <path d="M54 138 C136 154 240 163 364 160 C469 158 552 146 640 124" stroke="#fff" stroke-width="8" opacity=".55"/>
+    <circle cx="158" cy="160" r="38" fill="#070710"/>
+    <circle cx="532" cy="142" r="34" fill="#070710"/>
+    <ellipse cx="70" cy="108" rx="42" ry="18" fill="#fff7c5" filter="url(#glow)"/>
+    <ellipse cx="610" cy="126" rx="44" ry="18" fill="#fff7c5" filter="url(#glow)"/>
+  </g>
+  <g transform="translate(520 586) rotate(-13)">
+    <path d="M42 112 C84 36 263 4 443 36 C583 61 708 123 740 190 C621 230 292 234 74 194 C30 186 16 150 42 112Z" fill="url(#redCar)"/>
+    <path d="M210 40 C292 20 404 30 510 78 L454 128 C355 96 270 96 184 116Z" fill="#111522" opacity=".92"/>
+    <path d="M332 34 L404 48 L288 206 L204 196Z" fill="#fff" opacity=".85"/>
+    <path d="M95 164 C200 185 336 195 502 188 C602 184 681 169 730 146" stroke="#ffd15f" stroke-width="9" opacity=".76"/>
+    <circle cx="184" cy="198" r="46" fill="#070710"/>
+    <circle cx="612" cy="174" r="42" fill="#070710"/>
+    <ellipse cx="83" cy="130" rx="54" ry="24" fill="#fff7c5" filter="url(#glow)"/>
+    <ellipse cx="682" cy="156" rx="54" ry="22" fill="#fff7c5" filter="url(#glow)"/>
+  </g>
+  <g transform="translate(1025 356) rotate(-7)" opacity=".92">
+    <path d="M30 76 C61 30 174 12 279 32 C354 46 433 82 462 120 C394 153 174 158 45 132 C20 127 14 97 30 76Z" fill="url(#yellowCar)"/>
+    <path d="M128 32 C183 20 250 29 313 58 L278 88 C221 70 158 69 106 81Z" fill="#101424" opacity=".9"/>
+    <circle cx="120" cy="135" r="28" fill="#070710"/>
+    <circle cx="365" cy="120" r="26" fill="#070710"/>
+    <ellipse cx="54" cy="92" rx="30" ry="13" fill="#fff7c5" filter="url(#glow)"/>
+  </g>
+  <rect x="0" y="0" width="1600" height="900" fill="url(#sky)" opacity=".18"/>
+</svg>

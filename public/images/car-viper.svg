@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="Original red GT1 car illustration">
+  <rect width="720" height="420" fill="#151225"/>
+  <path d="M82 254 C134 156 312 126 478 154 C572 170 642 222 670 288 C528 330 258 334 96 302 C68 296 62 278 82 254Z" fill="#f04b37"/>
+  <path d="M262 146 C332 122 442 142 512 188 L460 230 C386 202 310 202 234 224Z" fill="#070710"/>
+  <path d="M124 282 C238 304 452 306 642 270" stroke="#ffd15f" stroke-width="12"/>
+  <circle cx="194" cy="304" r="42" fill="#05050b"/>
+  <circle cx="548" cy="286" r="38" fill="#05050b"/>
+  <text x="50" y="76" fill="#fff" font-family="Arial, sans-serif" font-size="38" font-weight="800">VIPER GTS-R</text>
+</svg>

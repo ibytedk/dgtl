@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="Original teal GT1 car illustration">
+  <rect width="720" height="420" fill="#10131d"/>
+  <path d="M70 260 C132 146 322 112 510 158 C606 182 662 232 682 288 C524 326 240 328 92 302 C62 296 52 282 70 260Z" fill="#19c6b7"/>
+  <path d="M282 140 C370 124 472 150 540 202 L486 236 C402 204 318 202 238 226Z" fill="#070710"/>
+  <path d="M290 134 L380 146 L304 314 L220 304Z" fill="#f04b37" opacity=".9"/>
+  <circle cx="188" cy="306" r="42" fill="#05050b"/>
+  <circle cx="560" cy="286" r="38" fill="#05050b"/>
+  <text x="50" y="76" fill="#fff" font-family="Arial, sans-serif" font-size="38" font-weight="800">MC12 GT1</text>
+</svg>

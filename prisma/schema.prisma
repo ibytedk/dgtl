@@ -1,0 +1,275 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  DRIVER
+}
+
+enum DriverLevel {
+  AM
+  PRO
+}
+
+enum RaceStatus {
+  DRAFT
+  SIGNUP_OPEN
+  SIGNUP_CLOSED
+  COMPLETED
+}
+
+enum RegistrationStatus {
+  PENDING
+  CONFIRMED
+  WAITLIST
+  CANCELLED
+}
+
+enum ResultStatus {
+  CLASSIFIED
+  DNF
+  DNS
+  DSQ
+}
+
+enum UploadStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum DownloadCategory {
+  SKIN
+  TRACK
+  CAR
+  PATCH
+  SYNC_TOOL
+  SERVER_FILE
+}
+
+model User {
+  id           String         @id @default(cuid())
+  email        String         @unique
+  name         String
+  role         UserRole       @default(DRIVER)
+  passwordHash String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  profile      DriverProfile?
+}
+
+model DriverProfile {
+  id            String             @id @default(cuid())
+  userId        String             @unique
+  user          User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  handle        String             @unique
+  racingNumber  Int                @unique
+  level         DriverLevel        @default(AM)
+  country       String             @default("DK")
+  bio           String?            @db.Text
+  preferredCarId String?
+  preferredCar  Car?              @relation(fields: [preferredCarId], references: [id])
+  teamId        String?
+  team          Team?              @relation(fields: [teamId], references: [id])
+  registrations RaceRegistration[]
+  results       RaceResult[]
+  skinUploads   SkinUpload[]
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+}
+
+model Team {
+  id          String          @id @default(cuid())
+  name        String          @unique
+  slug        String          @unique
+  description String?         @db.Text
+  logoUrl     String?         @db.VarChar(512)
+  members     DriverProfile[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model RacingClass {
+  id          String             @id @default(cuid())
+  name        String             @unique
+  slug        String             @unique
+  color       String
+  description String?            @db.Text
+  sortOrder   Int                @default(0)
+  cars        Car[]
+  raceClasses RaceClass[]
+  results     RaceResult[]
+  skinUploads SkinUpload[]
+}
+
+model Car {
+  id            String             @id @default(cuid())
+  name          String
+  slug          String             @unique
+  manufacturer  String
+  model         String
+  year          Int?
+  classId       String
+  class         RacingClass        @relation(fields: [classId], references: [id])
+  screenshotUrl String?            @db.VarChar(512)
+  specs         Json               @default("{}")
+  drivers       DriverProfile[]
+  registrations RaceRegistration[]
+  results       RaceResult[]
+  skinUploads   SkinUpload[]
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+}
+
+model Track {
+  id            String   @id @default(cuid())
+  name          String
+  slug          String   @unique
+  country       String
+  lengthKm      Decimal? @db.Decimal(5, 3)
+  screenshotUrl String?   @db.VarChar(512)
+  data          Json     @default("{}")
+  races         Race[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model PointScale {
+  id        String       @id @default(cuid())
+  name      String       @unique
+  slug      String       @unique
+  isDefault Boolean      @default(false)
+  awards    PointAward[]
+  races     Race[]
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
+
+model PointAward {
+  id           String     @id @default(cuid())
+  pointScaleId String
+  pointScale   PointScale @relation(fields: [pointScaleId], references: [id], onDelete: Cascade)
+  position     Int
+  points       Int
+
+  @@unique([pointScaleId, position])
+}
+
+model Race {
+  id             String             @id @default(cuid())
+  title          String
+  slug           String             @unique
+  trackId        String
+  track          Track              @relation(fields: [trackId], references: [id])
+  startsAt       DateTime
+  signupOpensAt  DateTime?
+  signupClosesAt DateTime?
+  status         RaceStatus         @default(DRAFT)
+  pointScaleId   String
+  pointScale     PointScale         @relation(fields: [pointScaleId], references: [id])
+  classes        RaceClass[]
+  registrations  RaceRegistration[]
+  results        RaceResult[]
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+}
+
+model RaceClass {
+  raceId  String
+  classId String
+  race    Race        @relation(fields: [raceId], references: [id], onDelete: Cascade)
+  class   RacingClass @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  @@id([raceId, classId])
+}
+
+model RaceRegistration {
+  id        String             @id @default(cuid())
+  raceId    String
+  race      Race               @relation(fields: [raceId], references: [id], onDelete: Cascade)
+  driverId  String
+  driver    DriverProfile      @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  classId   String
+  carId     String
+  car       Car                @relation(fields: [carId], references: [id])
+  status    RegistrationStatus @default(PENDING)
+  notes     String?            @db.Text
+  createdAt DateTime           @default(now())
+  updatedAt DateTime           @updatedAt
+
+  @@unique([raceId, driverId])
+}
+
+model RaceResult {
+  id              String        @id @default(cuid())
+  raceId          String
+  race            Race          @relation(fields: [raceId], references: [id], onDelete: Cascade)
+  driverId        String
+  driver          DriverProfile @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  classId         String
+  class           RacingClass   @relation(fields: [classId], references: [id])
+  carId           String
+  car             Car           @relation(fields: [carId], references: [id])
+  position        Int?
+  status          ResultStatus  @default(CLASSIFIED)
+  lapsCompleted   Int           @default(0)
+  totalTimeMs     Int?
+  penaltySeconds  Int           @default(0)
+  pointsOverride  Int?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@unique([raceId, driverId])
+  @@index([classId, raceId])
+}
+
+model SkinUpload {
+  id          String        @id @default(cuid())
+  driverId    String
+  driver      DriverProfile @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  carId       String
+  car         Car           @relation(fields: [carId], references: [id])
+  classId     String
+  class       RacingClass   @relation(fields: [classId], references: [id])
+  fileName    String
+  storageKey  String        @db.VarChar(512)
+  fileSize    Int
+  checksum    String?
+  status      UploadStatus  @default(PENDING)
+  reviewNotes String?       @db.Text
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Download {
+  id          String           @id @default(cuid())
+  title       String
+  slug        String           @unique
+  category    DownloadCategory
+  version     String?
+  description String?          @db.Text
+  fileName    String
+  storageKey  String           @db.VarChar(512)
+  fileSize    Int?
+  isPublished Boolean          @default(false)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model NewsPost {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  excerpt     String    @db.Text
+  body        String    @db.Text
+  coverUrl    String?   @db.VarChar(512)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "anderstorp-2003",
+    "igcdName": "Anderstop GP",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/762.jpg",
+    "localPath": "/images/track-map-sources/igcd/anderstorp-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "anderstorp-south",
+    "igcdName": "Anderstop South",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/763.jpg",
+    "localPath": "/images/track-map-sources/igcd/anderstorp-south.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "barcelona-2003",
+    "igcdName": "Barcelona GP",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/743.jpg",
+    "localPath": "/images/track-map-sources/igcd/barcelona-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "barcelona-national",
+    "igcdName": "Barcelona National",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/744.jpg",
+    "localPath": "/images/track-map-sources/igcd/barcelona-national.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "brno-2003",
+    "igcdName": "Brno 2003",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/748.jpg",
+    "localPath": "/images/track-map-sources/igcd/brno-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "brno-2004",
+    "igcdName": "Brno 2004",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/749.jpg",
+    "localPath": "/images/track-map-sources/igcd/brno-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "donington-park-2003",
+    "igcdName": "Donington Park 2003",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/750.jpg",
+    "localPath": "/images/track-map-sources/igcd/donington-park-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "donington-park-2004",
+    "igcdName": "Donington Park 2004",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/751.jpg",
+    "localPath": "/images/track-map-sources/igcd/donington-park-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "donington-park-national",
+    "igcdName": "Donington Park National",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/752.jpg",
+    "localPath": "/images/track-map-sources/igcd/donington-park-national.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "dubai-club",
+    "igcdName": "Dubai Autodrome Club",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/758.jpg",
+    "localPath": "/images/track-map-sources/igcd/dubai-club.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "dubai-2004",
+    "igcdName": "Dubai Autodrome GP",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/757.jpg",
+    "localPath": "/images/track-map-sources/igcd/dubai-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "dubai-international",
+    "igcdName": "Dubai Autodrome International",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/760.jpg",
+    "localPath": "/images/track-map-sources/igcd/dubai-international.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "dubai-national",
+    "igcdName": "Dubai Autodrome National",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/759.jpg",
+    "localPath": "/images/track-map-sources/igcd/dubai-national.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "enna-pergusa-2003",
+    "igcdName": "Enna Pergusa",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/761.jpg",
+    "localPath": "/images/track-map-sources/igcd/enna-pergusa-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "estoril-2003",
+    "igcdName": "Estoril",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/756.jpg",
+    "localPath": "/images/track-map-sources/igcd/estoril-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "hockenheim-2004",
+    "igcdName": "Hockenheim GP",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/739.jpg",
+    "localPath": "/images/track-map-sources/igcd/hockenheim-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "hockenheim-national",
+    "igcdName": "Hockenheim International",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/741.jpg",
+    "localPath": "/images/track-map-sources/igcd/hockenheim-national.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "hockenheim-short",
+    "igcdName": "Hockenheim National",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/740.jpg",
+    "localPath": "/images/track-map-sources/igcd/hockenheim-short.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "imola",
+    "igcdName": "Imola",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/742.jpg",
+    "localPath": "/images/track-map-sources/igcd/imola.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "magny-cours-2003",
+    "igcdName": "Magny-Cours 2003",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/769.jpg",
+    "localPath": "/images/track-map-sources/igcd/magny-cours-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "magny-cours-2004",
+    "igcdName": "Magny-Cours 2004",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/770.jpg",
+    "localPath": "/images/track-map-sources/igcd/magny-cours-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "magny-cours-national",
+    "igcdName": "Magny-Cours National",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/771.jpg",
+    "localPath": "/images/track-map-sources/igcd/magny-cours-national.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "monza-2003",
+    "igcdName": "Monza 2003",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/766.jpg",
+    "localPath": "/images/track-map-sources/igcd/monza-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "monza-2004",
+    "igcdName": "Monza 2004",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/767.jpg",
+    "localPath": "/images/track-map-sources/igcd/monza-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "monza-junior",
+    "igcdName": "Monza Junior",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/768.jpg",
+    "localPath": "/images/track-map-sources/igcd/monza-junior.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "oschersleben-2003",
+    "igcdName": "Oschersleben 2003",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/745.jpg",
+    "localPath": "/images/track-map-sources/igcd/oschersleben-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "oschersleben-2004",
+    "igcdName": "Oschersleben 2004",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/746.jpg",
+    "localPath": "/images/track-map-sources/igcd/oschersleben-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "spa-2003",
+    "igcdName": "Spa Francorchamps 2003",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/764.jpg",
+    "localPath": "/images/track-map-sources/igcd/spa-2003.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "spa-2004",
+    "igcdName": "Spa Francorchamps 2004",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/765.jpg",
+    "localPath": "/images/track-map-sources/igcd/spa-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "valencia-2004",
+    "igcdName": "Valencia GP",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/753.jpg",
+    "localPath": "/images/track-map-sources/igcd/valencia-2004.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "valencia-long",
+    "igcdName": "Valencia Long",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/755.jpg",
+    "localPath": "/images/track-map-sources/igcd/valencia-long.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "valencia-national",
+    "igcdName": "Valencia National",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/754.jpg",
+    "localPath": "/images/track-map-sources/igcd/valencia-national.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  },
+  {
+    "slug": "zhuhai",
+    "igcdName": "Zhuhai",
+    "pageUrl": "https://www.igcd.net/game.php?id=10000202&type=circuits",
+    "sourceUrl": "https://www.igcd.net/images1/002/738.jpg",
+    "localPath": "/images/track-map-sources/igcd/zhuhai.jpg",
+    "usageNote": "Third-party in-game screenshot source. Rights status is not asserted by this script."
+  }
+]

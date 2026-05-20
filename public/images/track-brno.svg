@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="Stylized Brno track preview">
+  <rect width="720" height="420" fill="#081820"/>
+  <path d="M92 220 C114 118 226 104 304 160 C380 216 436 118 548 138 C650 156 656 284 540 316 C398 356 340 270 238 304 C150 334 78 288 92 220Z" fill="none" stroke="#eef2ff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92 220 C114 118 226 104 304 160 C380 216 436 118 548 138 C650 156 656 284 540 316 C398 356 340 270 238 304 C150 334 78 288 92 220Z" fill="none" stroke="#ffd15f" stroke-width="5" stroke-dasharray="18 16"/>
+  <path d="M-24 346 L720 146" stroke="#5f63ff" stroke-width="20" opacity=".48"/>
+  <text x="42" y="70" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="800">BRNO</text>
+  <text x="42" y="112" fill="#c7c9f4" font-family="Arial, sans-serif" font-size="20">5.403 KM / FLOW</text>
+</svg>

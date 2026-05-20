@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="Stylized Spa-Francorchamps track preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b1546"/><stop offset="1" stop-color="#10131d"/></linearGradient>
+  </defs>
+  <rect width="720" height="420" fill="url(#bg)"/>
+  <path d="M70 296 C184 258 212 168 284 164 C355 160 376 272 462 248 C548 224 526 120 642 102" fill="none" stroke="#eef2ff" stroke-width="22" stroke-linecap="round"/>
+  <path d="M72 296 C186 258 214 168 286 164 C355 160 376 272 462 248 C548 224 526 120 642 102" fill="none" stroke="#f04b37" stroke-width="5" stroke-dasharray="22 18"/>
+  <path d="M0 336 L720 190" stroke="#ffd15f" stroke-width="16" opacity=".55"/>
+  <text x="42" y="70" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="800">SPA</text>
+  <text x="42" y="112" fill="#c7c9f4" font-family="Arial, sans-serif" font-size="20">7.004 KM / 20 SVING</text>
+</svg>

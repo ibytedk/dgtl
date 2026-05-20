@@ -1,0 +1,11 @@
+.next
+node_modules
+tsconfig.tsbuildinfo
+coverage
+playwright-report
+test-results
+.env
+.env.local
+.env.production
+public/uploads
+tmp

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="Original yellow GT2 car illustration">
+  <rect width="720" height="420" fill="#17101f"/>
+  <path d="M88 258 C140 170 290 138 458 154 C568 164 646 220 674 284 C542 326 254 330 100 302 C70 296 62 278 88 258Z" fill="#ffd15f"/>
+  <path d="M248 148 C330 132 428 150 500 192 L456 228 C378 204 300 204 228 224Z" fill="#070710"/>
+  <path d="M124 284 C252 304 478 302 638 268" stroke="#19c6b7" stroke-width="12"/>
+  <circle cx="194" cy="304" r="42" fill="#05050b"/>
+  <circle cx="548" cy="286" r="38" fill="#05050b"/>
+  <text x="50" y="76" fill="#fff" font-family="Arial, sans-serif" font-size="38" font-weight="800">911 RSR</text>
+</svg>
