@@ -10,6 +10,9 @@ test("homepage exposes the DGTL hero and next race entry point", async ({ page }
   await expect(page.getByRole("link", { name: /Tilmeld dig næste løb/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Næste løb" })).toBeVisible();
   await expect(page.getByText("Spa 2004").first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Nyeste medlemmer" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "På vej ud..." })).toBeVisible();
+  await expect(page.getByText("Tomas Deha")).toBeVisible();
 });
 
 test("calendar shows race classes and signup state", async ({ page }) => {

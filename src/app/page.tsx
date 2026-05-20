@@ -13,12 +13,16 @@ import {
   Wrench
 } from "lucide-react";
 
+import { MemberActivityWidget } from "@/components/member-activity-widget";
 import { formatDate } from "@/lib/format";
+import { getLatestMembers, getMembersOnTheWayOut } from "@/lib/member-activity";
 import {
   carById,
   cars,
   downloads,
   driverStandings,
+  leagueReferenceTime,
+  memberActivity,
   newsPosts,
   races,
   racingClasses,
@@ -57,6 +61,8 @@ export default function HomePage() {
   const featuredCar = carById("maserati-mc12-gt1-2004") ?? cars[0];
   const nextRaceEntries = registrations.filter((item) => item.raceId === nextRace.id).length;
   const publishedDownloads = downloads.filter((download) => download.isPublished);
+  const latestMembers = getLatestMembers(memberActivity, 5);
+  const inactiveMembers = getMembersOnTheWayOut(memberActivity, leagueReferenceTime, 30, 10);
 
   return (
     <main className="concept-home">
@@ -278,6 +284,10 @@ export default function HomePage() {
                 </li>
               ))}
             </ol>
+          </article>
+
+          <article className="concept-panel members-panel">
+            <MemberActivityWidget latestMembers={latestMembers} inactiveMembers={inactiveMembers} />
           </article>
 
           <article className="concept-panel news-panel">

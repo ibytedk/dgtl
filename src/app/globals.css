@@ -1989,7 +1989,13 @@ td {
 
 .concept-bottom-grid {
   display: grid;
-  grid-template-columns: 1.25fr 1.1fr 0.95fr 0.68fr 1fr;
+  grid-template-columns:
+    minmax(210px, 1.2fr)
+    minmax(210px, 1.05fr)
+    minmax(190px, 0.9fr)
+    minmax(120px, 0.6fr)
+    minmax(116px, 0.55fr)
+    minmax(180px, 0.95fr);
   gap: 20px;
   padding: 12px 0 14px;
 }
@@ -2366,6 +2372,84 @@ td {
 .team-list strong {
   font-size: 11px;
   text-transform: uppercase;
+}
+
+.members-panel {
+  padding-right: 16px;
+}
+
+.retro-member-widget {
+  border: 1px solid #0a0a0a;
+  border-right-color: #5d5d5d;
+  border-bottom-color: #5d5d5d;
+  background: #a7a7a7;
+  box-shadow:
+    inset 1px 1px 0 #ececec,
+    inset -1px -1px 0 #565656;
+  color: #050505;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.12;
+}
+
+.retro-member-widget section + section {
+  margin-top: 4px;
+}
+
+.retro-member-heading {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  margin: 0;
+  padding: 0 4px;
+  overflow: hidden;
+  border-bottom: 1px solid #050505;
+  background: #151515;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 1px 1px 0 #000;
+  white-space: nowrap;
+}
+
+.retro-member-heading::after {
+  content: "";
+  flex: 1;
+  height: 12px;
+  margin-left: 5px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.24), transparent),
+    repeating-conic-gradient(#101010 0 25%, #777 0 50%) 0 0 / 10px 10px;
+}
+
+.retro-member-list {
+  position: relative;
+  min-height: 58px;
+  margin: 0;
+  padding: 4px 13px 5px 8px;
+  overflow: hidden;
+  border-top: 1px solid #e0e0e0;
+  background: #c8c8c8;
+  list-style: none;
+}
+
+.retro-member-list::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  bottom: 1px;
+  width: 7px;
+  border-left: 1px solid #626262;
+  background: linear-gradient(90deg, #777, #e7e7e7 45%, #7b7b7b);
+}
+
+.retro-member-list li {
+  overflow: hidden;
+  color: #03101a;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .concept-news-list {

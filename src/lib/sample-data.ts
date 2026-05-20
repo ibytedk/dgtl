@@ -90,7 +90,8 @@ export const drivers = [
     racingNumber: 7,
     level: "PRO",
     teamId: "nordic-apex",
-    preferredCarId: "maserati-mc12-gt1-2004"
+    preferredCarId: "maserati-mc12-gt1-2004",
+    lastLoginAt: "2026-05-19T20:10:00.000Z"
   },
   {
     id: "jonas-vang",
@@ -100,7 +101,8 @@ export const drivers = [
     racingNumber: 14,
     level: "PRO",
     teamId: "nordic-apex",
-    preferredCarId: "chrysler-viper-gts-r-2004"
+    preferredCarId: "chrysler-viper-gts-r-2004",
+    lastLoginAt: "2026-05-17T19:45:00.000Z"
   },
   {
     id: "emil-riis",
@@ -110,7 +112,8 @@ export const drivers = [
     racingNumber: 22,
     level: "AM",
     teamId: "jylland-racing",
-    preferredCarId: "ferrari-550-maranello-gts-2004"
+    preferredCarId: "ferrari-550-maranello-gts-2004",
+    lastLoginAt: "2026-04-12T18:05:00.000Z"
   },
   {
     id: "sara-lund",
@@ -120,7 +123,109 @@ export const drivers = [
     racingNumber: 44,
     level: "AM",
     teamId: "copenhagen-gt",
-    preferredCarId: "porsche-911-gt3-rsr-2004"
+    preferredCarId: "porsche-911-gt3-rsr-2004",
+    lastLoginAt: "2026-05-18T21:05:00.000Z"
+  }
+] as const;
+
+export const leagueReferenceTime = "2026-05-20T12:00:00.000Z";
+
+export const memberActivity = [
+  {
+    id: "mich",
+    displayName: "Mich",
+    createdAt: "2026-05-20T09:20:00.000Z",
+    lastLoginAt: "2026-05-20T09:20:00.000Z"
+  },
+  {
+    id: "lasse-jakobsen",
+    displayName: "Lasse Jakobsen",
+    createdAt: "2026-05-19T18:30:00.000Z",
+    lastLoginAt: "2026-05-19T19:02:00.000Z"
+  },
+  {
+    id: "gribben",
+    displayName: "Gribben",
+    createdAt: "2026-05-18T20:10:00.000Z",
+    lastLoginAt: "2026-05-18T20:11:00.000Z"
+  },
+  {
+    id: "bjoern",
+    displayName: "Bjørn",
+    createdAt: "2026-05-16T13:40:00.000Z",
+    lastLoginAt: "2026-05-16T13:40:00.000Z"
+  },
+  {
+    id: "saa",
+    displayName: "saa",
+    createdAt: "2026-05-15T21:15:00.000Z",
+    lastLoginAt: "2026-05-15T21:16:00.000Z"
+  },
+  {
+    id: "mads-holm",
+    displayName: "Mads Holm",
+    createdAt: "2026-03-10T11:00:00.000Z",
+    lastLoginAt: "2026-05-19T20:10:00.000Z"
+  },
+  {
+    id: "tomas-deha",
+    displayName: "Tomas Deha",
+    createdAt: "2026-01-11T17:00:00.000Z",
+    lastLoginAt: "2026-03-18T19:15:00.000Z"
+  },
+  {
+    id: "mccoy",
+    displayName: "McCoy",
+    createdAt: "2026-02-05T20:00:00.000Z",
+    lastLoginAt: "2026-04-02T20:30:00.000Z"
+  },
+  {
+    id: "sofus",
+    displayName: "Sofus",
+    createdAt: "2026-02-09T19:30:00.000Z",
+    lastLoginAt: "2026-04-04T18:30:00.000Z"
+  },
+  {
+    id: "paw-v-christensen",
+    displayName: "Paw v Christensen",
+    createdAt: "2026-02-12T18:30:00.000Z",
+    lastLoginAt: "2026-04-05T19:30:00.000Z"
+  },
+  {
+    id: "k-vedsoe",
+    displayName: "K Vedsø",
+    createdAt: "2026-02-13T21:10:00.000Z",
+    lastLoginAt: "2026-04-06T20:40:00.000Z"
+  },
+  {
+    id: "mathias-kastrup",
+    displayName: "Mathias Kastrup",
+    createdAt: "2026-02-15T21:20:00.000Z",
+    lastLoginAt: "2026-04-10T21:15:00.000Z"
+  },
+  {
+    id: "nized",
+    displayName: "nized",
+    createdAt: "2026-02-18T17:10:00.000Z",
+    lastLoginAt: "2026-04-11T17:40:00.000Z"
+  },
+  {
+    id: "poul",
+    displayName: "poul",
+    createdAt: "2026-03-01T18:15:00.000Z",
+    lastLoginAt: "2026-04-12T18:10:00.000Z"
+  },
+  {
+    id: "nikki",
+    displayName: "Nikki",
+    createdAt: "2026-03-06T19:45:00.000Z",
+    lastLoginAt: "2026-04-15T19:45:00.000Z"
+  },
+  {
+    id: "mammoth",
+    displayName: "Mammoth",
+    createdAt: "2026-03-10T20:20:00.000Z",
+    lastLoginAt: "2026-04-16T20:15:00.000Z"
   }
 ] as const;
 
