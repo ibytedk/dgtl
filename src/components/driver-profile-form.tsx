@@ -15,13 +15,7 @@ import {
   type DriverIntent,
   type DriverLevel
 } from "@/lib/driver-level";
-
-export type ProfileCarChoice = {
-  id: string;
-  name: string;
-  classId: string;
-  className: string;
-};
+import type { ProfileCarChoice } from "@/lib/profile-car-choices";
 
 type DriverProfileFormProps = {
   initialName: string;

@@ -2,10 +2,11 @@ import { UploadCloud, UserRound } from "lucide-react";
 
 import { getDgtlSession } from "@/auth";
 import { ClassTag } from "@/components/class-tag";
-import { DriverProfileForm, type ProfileCarChoice } from "@/components/driver-profile-form";
+import { DriverProfileForm } from "@/components/driver-profile-form";
 import { driverLevelLabel, type DriverLevel } from "@/lib/driver-level";
+import { getProfileCarChoices, type ProfileCarChoice } from "@/lib/profile-car-choices";
 import { prisma } from "@/lib/prisma";
-import { carById, cars, classById, drivers, skinUploads } from "@/lib/sample-data";
+import { carById, drivers, skinUploads } from "@/lib/sample-data";
 
 export const dynamic = "force-dynamic";
 
@@ -36,15 +37,6 @@ function defaultHandle(value: string) {
     .slice(0, 40);
 }
 
-function sampleCarChoices(): ProfileCarChoice[] {
-  return cars.map((car) => ({
-    id: car.id,
-    name: car.name,
-    classId: car.classId,
-    className: classById(car.classId)?.name ?? car.classId
-  }));
-}
-
 async function databaseProfileView(userId: string): Promise<ProfileView | null> {
   const user = await prisma.user.findUnique({
     where: { id: userId },
@@ -63,11 +55,6 @@ async function databaseProfileView(userId: string): Promise<ProfileView | null> 
     return null;
   }
 
-  const dbCars = await prisma.car.findMany({
-    include: { class: true },
-    orderBy: [{ classId: "asc" }, { name: "asc" }]
-  });
-
   return {
     name: user.name,
     handle: user.profile?.handle ?? defaultHandle(user.name),
@@ -83,12 +70,7 @@ async function databaseProfileView(userId: string): Promise<ProfileView | null> 
         fileName: upload.fileName,
         status: upload.status
       })) ?? [],
-    carChoices: dbCars.map((car) => ({
-      id: car.id,
-      name: car.name,
-      classId: car.classId,
-      className: car.class.name
-    }))
+    carChoices: getProfileCarChoices()
   };
 }
 
@@ -119,7 +101,7 @@ async function profileView(): Promise<ProfileView> {
         fileName: upload.fileName,
         status: upload.status
       })),
-    carChoices: sampleCarChoices()
+    carChoices: getProfileCarChoices()
   };
 }
 
