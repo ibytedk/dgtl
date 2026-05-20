@@ -9,13 +9,13 @@ export const driverIntentOptions: Array<{
 }> = [
   {
     intent: "FUN",
-    label: "Kører for sjov",
+    label: "Kører for sjov (Am)",
     description: "Fokus på fair racing, stemning og stabil deltagelse.",
     level: "AM"
   },
   {
     intent: "WIN",
-    label: "Kører for at vinde",
+    label: "Kører for at vinde (Pro)",
     description: "Fokus på pace, resultater og mesterskabskamp.",
     level: "PRO"
   }

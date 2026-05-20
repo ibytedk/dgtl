@@ -53,6 +53,11 @@ enum DownloadCategory {
   SERVER_FILE
 }
 
+enum RuleDocumentScope {
+  GENERAL
+  SERIES
+}
+
 model User {
   id           String         @id @default(cuid())
   email        String         @unique
@@ -272,4 +277,18 @@ model NewsPost {
   publishedAt DateTime?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+}
+
+model RuleDocument {
+  id          String            @id @default(cuid())
+  slug        String            @unique
+  title       String
+  scope       RuleDocumentScope @default(GENERAL)
+  seriesSlug  String?           @db.VarChar(100)
+  bodyHtml    String            @db.LongText
+  publishedAt DateTime?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@index([scope, seriesSlug])
 }

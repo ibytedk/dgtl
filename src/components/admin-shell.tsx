@@ -1,6 +1,7 @@
-import { CheckCircle2, FileArchive, Flag, ShieldCheck, UploadCloud } from "lucide-react";
+import { CheckCircle2, FileArchive, FileText, Flag, ShieldCheck, UploadCloud } from "lucide-react";
 
 import { downloads, races, racingClasses, registrations, results, skinUploads } from "@/lib/sample-data";
+import { RulesEditor } from "@/components/rules-editor";
 
 const workflowItems = [
   {
@@ -32,6 +33,12 @@ const workflowItems = [
     title: "Tilmeldinger",
     metric: `${registrations.length} entries`,
     body: "Valideres mod åbent løb, tilladte klasser og valgt bil."
+  },
+  {
+    icon: FileText,
+    title: "Regler",
+    metric: "2 regelsæt",
+    body: "Generelle regler og DGTL Endurance-tillægsregler redigeres som publiceret indhold."
   }
 ];
 
@@ -45,6 +52,7 @@ export function AdminShell() {
         <a href="#skins">Skins</a>
         <a href="#downloads">Downloads</a>
         <a href="#news">Nyheder</a>
+        <a href="#rules">Regler</a>
       </aside>
       <div className="admin-main">
         <div className="admin-title">
@@ -100,6 +108,7 @@ export function AdminShell() {
             </button>
           </form>
         </section>
+        <RulesEditor />
       </div>
     </div>
   );
