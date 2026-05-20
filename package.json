@@ -14,6 +14,7 @@
     "assets:tracks": "tsx scripts/generate-track-assets.ts",
     "assets:igcd-track-maps": "tsx scripts/download-igcd-track-maps.ts",
     "assets:track-sources": "tsx scripts/download-track-map-sources.ts",
+    "db:sync-cars": "tsx scripts/sync-catalog-cars.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:seed": "tsx prisma/seed.ts"

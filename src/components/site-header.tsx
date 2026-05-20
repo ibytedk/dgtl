@@ -1,6 +1,9 @@
 import Link from "next/link";
 import type { Route } from "next";
 
+import { getDgtlSession } from "@/auth";
+import { SignOutButton } from "@/components/sign-out-button";
+
 const navItems: Array<{ href: Route; label: string }> = [
   { href: "/kalender", label: "Kalender" },
   { href: "/baner", label: "Baner" },
@@ -11,7 +14,10 @@ const navItems: Array<{ href: Route; label: string }> = [
   { href: "/nyheder", label: "Nyheder" }
 ];
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  const session = await getDgtlSession();
+  const userName = session?.user?.name?.trim();
+
   return (
     <header className="site-header">
       <Link href="/" className="brand-lockup" aria-label="DGTL forside">
@@ -26,12 +32,26 @@ export function SiteHeader() {
         ))}
       </nav>
       <div className="header-actions">
-        <Link className="header-action" href="/login">
-          Login
-        </Link>
-        <Link className="header-action strong" href="/profil">
-          Opret konto
-        </Link>
+        {session?.user?.id ? (
+          <>
+            <span className="header-user" title={userName ?? "Logget ind"}>
+              {userName ?? "Logget ind"}
+            </span>
+            <Link className="header-action strong" href="/profil">
+              Profil
+            </Link>
+            <SignOutButton />
+          </>
+        ) : (
+          <>
+            <Link className="header-action" href="/login">
+              Login
+            </Link>
+            <Link className="header-action strong" href="/profil">
+              Opret konto
+            </Link>
+          </>
+        )}
       </div>
     </header>
   );

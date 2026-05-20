@@ -82,6 +82,7 @@ Når du skriver API-kode:
 
 ## UI- Og Stilregler
 
+- Ved visuelle ændringer, designreview, responsivt layout, CSS-polish eller nye UI-komponenter skal skillen `dgtl-design-guide` bruges.
 - UI-sprog er dansk.
 - Forsiden skal bevare tidlig-2000er GT-magasin/FIA GT/GTR2-nostalgi uden at kopiere rigtige logoer eller sponsor-grafik.
 - Brug ikke gamle DGTL-webbokse som grafisk stil, medmindre brugeren eksplicit beder om en retro-komponent.
